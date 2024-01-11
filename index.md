@@ -1,8 +1,8 @@
 
 # Hello, world!
 ## My name is Eshaan Sharma!
-*this is me using Markdown*
-**I go to the University of California San Diego**
+*I go to the*
+**University of California San Diego**
 ```
 # I am a computer science major
 print 'Goodbye, world!'
