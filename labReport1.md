@@ -55,7 +55,7 @@ Hello.java
 This command **does not** output an *error* ONLY because of the `cd lecture1` command, which switches the current working directory from `/home` to `/lecture1` before using the `ls Hello.java` command. This is essential for the output (`Hello.java`) because if I did not use the `cd` command to switch the current working directory to `/lecture1`, I WOULD HAVE received an *error* that says `ls: cannot access 'Hello.java': No such file or directory`. Since I did switch the current working directory, the output the command `ls Hello.java` provides is `Hello.java` because it is the only file to list for the path `/Hello.java`.
 
 ---
-## 'cat' Examples
+## `cat` Examples
 The command `cat <path1> <path2> ... ` is used to print the contents of one or more files given by the paths
 
 ***no arguments***
