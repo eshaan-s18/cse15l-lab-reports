@@ -1,7 +1,7 @@
 # Lab Report 1 - Remote Access and FileSystem (Week 1)
 
 ## `cd` Examples
-The command `cd <path` represents "Change Directory" and is used to switch the current working directory to the given path
+The command `cd <path>` represents "Change Directory" and is used to switch the current working directory to the given path
 
 ***no arguments***
 ```
