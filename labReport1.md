@@ -23,7 +23,7 @@ This command **does not** output an *error*. This example switches the current w
 bash: cd: Hello.java: Not a directory
 [user@sahara ~/lecture1]$ 
 ```
-This command **does** output an *error*. This example attempts to switch the current working directory (`/lecture1`) to `Hello.java`, but fails because the command includes a file argument instead of a directory argument. The current working directory (`/lecture1`) can only switch to directories, not files, so the command leads to an error and the current working directory (`/lecture1`) remains the same.
+This command **does** output an *error*. This example attempts to switch the current working directory (`/lecture1`) to `Hello.java`, but fails because the command includes a file argument instead of a directory argument. The current working directory (`/lecture1`) can only switch to directories, not files, so the command leads to an *error* and the current working directory (`/lecture1`) remains the same.
 
 ---
 ## `ls` Examples
@@ -43,7 +43,7 @@ This command **does not** output an *error*. It is not essential for the `ls` co
 Hello.class  Hello.java  messages  README
 [user@sahara ~]$
 ```
-This command **does not** output an *error*. Unlike the previous example, this command does provide a path argument to the `ls` command in the form of `lecture1`. As a result, the command outputs a list of the files and folders in the path argument provided (`/lecture1`). The output of this command is `Hello.class  Hello.java  messages  README`.
+This command **does not** output an *error*. The working directory was `/home` when the command was run. Unlike the previous example, the command above does provide a path argument to the `ls` command in the form of `lecture1`. As a result, the command outputs a list of the files and folders in the path argument provided (`/lecture1`). The output of this command is `Hello.class  Hello.java  messages  README`.
 
 ***path to a file***
 ```
@@ -52,7 +52,7 @@ This command **does not** output an *error*. Unlike the previous example, this c
 Hello.java
 [user@sahara ~/lecture1]$
 ```
-This command **does not** output an *error* ONLY because of the `cd lecture1` command, which switches the current working directory from `/home` to `/lecture1` before using the `ls Hello.java` command. This is essential for the output (`Hello.java`) because if I did not use the `cd` command to switch the current working directory to `/lecture1`, I WOULD HAVE received an *error* that says `ls: cannot access 'Hello.java': No such file or directory`. Since I did switch the current working directory, the output the command `ls Hello.java` provides is `Hello.java` because it is the only file to list for the path `/Hello.java`.
+This command **does not** output an *error* ONLY because of the `cd lecture1` command, which switches the current working directory from `/home` to `/lecture1` before using the `ls Hello.java` command. This is essential for the output (`Hello.java`) because if I did not use the `cd` command to switch the current working directory to `/lecture1` from `/home`, I WOULD HAVE received an *error* that says `ls: cannot access 'Hello.java': No such file or directory`. Since I did switch the current working directory to `/lecture1`, the output the command `ls Hello.java` provides is `Hello.java` because it is the only file to list for the path `/Hello.java`.
 
 ---
 ## `cat` Examples
@@ -91,4 +91,4 @@ public class Hello {
   }
 [user@sahara ~/lecture1]$
 ```
-This command **does not** output an *error* ONLY because of the `cd lecture1` command, which switches the current working directory from `/home` to `/lecture1` before using the `cat Hello.java` command. This is essential for the output seen above because if I did not use the `cd` command to switch the current working directory to `/lecture1`, I WOULD HAVE received an *error* that says `cat: Hello.java: No such file or directory`. Since I did switch the current working directory, the output seen above contains the contents and code in the `Hello.java` file.
+This command **does not** output an *error* ONLY because of the `cd lecture1` command, which switches the current working directory from `/home` to `/lecture1` before using the `cat Hello.java` command. This is essential for the output seen above because if I did not use the `cd` command to switch the current working directory to `/lecture1` from `/home`, I WOULD HAVE received an *error* that says `cat: Hello.java: No such file or directory`. Since I did switch the current working directory to `/lecture1`, the output seen above contains the contents and code in the `Hello.java` file.
