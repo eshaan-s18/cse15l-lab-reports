@@ -52,7 +52,7 @@ This command **does not** output an *error*. The working directory was `/home` w
 Hello.java
 [user@sahara ~/lecture1]$
 ```
-This command **does not** output an *error* ONLY because of the `cd lecture1` command, which switches the current working directory from `/home` to `/lecture1` before using the `ls Hello.java` command. This is essential for the output (`Hello.java`) because if I did not use the `cd` command to switch the current working directory to `/lecture1` from `/home`, I WOULD HAVE received an *error* that says `ls: cannot access 'Hello.java': No such file or directory`. Since I did switch the current working directory to `/lecture1`, the output the command `ls Hello.java` provides is `Hello.java` because it is the only file to list for the path `/Hello.java`.
+This command **does not** output an *error* ONLY because of the `cd lecture1` command, which switches the current working directory from `/home` to `/lecture1` before using the `ls Hello.java` command. This is essential for the output seen above (`Hello.java`) because if I did not use the `cd` command to switch the current working directory to `/lecture1` from `/home`, I WOULD HAVE received an *error* that says `ls: cannot access 'Hello.java': No such file or directory`. Since I did switch the current working directory to `/lecture1`, the output the command `ls Hello.java` provides is `Hello.java` because it is the only file to list for the path `/Hello.java`.
 
 ---
 ## `cat` Examples
