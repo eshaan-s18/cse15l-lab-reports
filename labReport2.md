@@ -43,3 +43,8 @@ In this specific request, the `user` field changes to `yash`, and the `message` 
 
 
 # Part 2 #
+![Screenshot for Part 2](Part2Screenshot.jpg)
+
+
+# Part 3 #
+In week 2 and 3, I learned about how to connect to a remote computer and run a server on that computer, which I had no idea how to do before. Learning about how to write the code to create the server using the `URLHandler` interface was very fascinating to me. Additionally I learned about how *localhost* and *ports* work. Before I learned about how they work in week 2 and 3, I previously heard these terms, but was unsure about what they meant. Finally, learning about the `curl` command was something new I learned how to use that I didn't know about before.
