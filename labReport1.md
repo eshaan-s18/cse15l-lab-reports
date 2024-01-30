@@ -8,13 +8,16 @@ The command `cd <path>` represents "Change Directory" and is used to switch the 
 [user@sahara ~]$ pwd
 /home
 [user@sahara ~]$ cd
-[user@sahara ~]$ 
+[user@sahara ~]$ pwd
+/home
+
 [user@sahara ~]$ cd lecture1
 [user@sahara ~/lecture1]$ pwd
 /home/lecture1
 [user@sahara ~/lecture1]$ cd
 [user@sahara ~]$ pwd
 /home
+
 [user@sahara ~]$ cd lecture1/messages
 [user@sahara ~/lecture1/messages]$ pwd
 /home/lecture1/messages
@@ -22,7 +25,7 @@ The command `cd <path>` represents "Change Directory" and is used to switch the 
 [user@sahara ~]$ pwd
 /home
 ```
-This command **does not** output an *error*. When the command `cd` is used without any arguments, it returns the user back to their `/home` directory regardless of what the current working directory is when `cd` with no arguments is called. In the example above, `cd` with no arguments is called from the `/home` directory, the `/home/lecture1` directory, and the `/home/lecture1/messages`, and the command returns the user back to the `/home` directory in all cases as seen when the `pwd` command is used above, which prints the current working directory.
+This command **does not** output an *error*. When the command `cd` is used without any arguments, it returns the user back to their `/home` directory regardless of what the current working directory is. In the example above, `cd` with no arguments is called from the `/home` directory, the `/home/lecture1` directory, and the `/home/lecture1/messages`, and the command returns the user back to the `/home` directory in all cases. This behavior is confirmed by the `pwd` command, which is used above and prints the current working directory.
 
 ***path to a directory***
 ```
@@ -32,7 +35,7 @@ This command **does not** output an *error*. When the command `cd` is used witho
 [user@sahara ~/lecture1]$ pwd
 /home/lecture1
 ```
-This command **does not** output an *error*. This example switches the current working directory (`/home`) to `/lecture1` because the command includes a directory argument (`lecture1`) that defines which path the current working directory (now `/lecture1`) should switch to. The current working directory changes from `/home` to `/lecture1` as seen in the example above using the `pwd` command which prints the current working directory.
+This command **does not** output an *error*. This example switches the current working directory (`/home`) to `/home/lecture1` because the command includes a directory argument (`lecture1`) that defines which path the current working directory (now `/home/lecture1`) should switch to. The current working directory changes from `/home` to `/home/lecture1` as seen in the example above and confirmed using the `pwd` command which prints the current working directory.
 
 ***path to a file***
 ```
@@ -46,7 +49,7 @@ bash: cd: Hello.java: Not a directory
 [user@sahara ~/lecture1]$ pwd
 /home/lecture1
 ```
-This command **does** output an *error*. This example attempts to switch the current working directory (`/lecture1`) to `Hello.java`, but fails because the command includes a file argument instead of a directory argument. The current working directory (`/lecture1`) can only switch to directories, not files, so the command leads to an *error* and the current working directory (`/lecture1`) remains the same as seen with the example above.
+This command **does** output an *error*. This example attempts to switch the current working directory (`/home/lecture1`) to `Hello.java`, but fails because the command includes a file argument instead of a directory argument. The current working directory (`/home/lecture1`) can only switch to directories, not files, so the command leads to an *error* and the current working directory (`/home/lecture1`) remains the same as seen with the example above.
 
 ---
 ## `ls` Examples
@@ -72,7 +75,7 @@ Hello.class  Hello.java  messages  READM
 [user@sahara ~]$ pwd
 /home
 ```
-This command **does not** output an *error*. The working directory was `/home` when the command was run. Unlike the previous example, the command above does provide a path argument to the `ls` command in the form of `lecture1`. As a result, the command outputs a list of the files and folders in the path argument provided (`/lecture1`). The output of this command is `Hello.class  Hello.java  messages  README`.
+This command **does not** output an *error*. The working directory was `/home` when the command was run. Unlike the previous example, the command above does provide a path argument to the `ls` command in the form of `lecture1`. As a result, the command outputs a list of the files and folders in the path argument provided (`lecture1`). The output of this command is `Hello.class  Hello.java  messages  README`, which is stored in the `/home/lecture1` directory.
 
 ***path to a file***
 ```
@@ -84,8 +87,12 @@ lecture1/Hello.java
 lecture1/messages/hi.txt
 [user@sahara ~]$ pwd
 /home
+[user@sahara ~]$ ls /home/lecture1/Hello.java
+/home/lecture1/Hello.java
+[user@sahara ~]$ pwd
+/home
 ```
-This command **does not** output an *error*. The working directory was `/home` when the command was run. When the `ls` command is run with a relative path to a file as an argument, the output is the same absolute path that was provided as an argument. When I run the `ls` command with the argument `lecture1/Hello.java` the output is the same as the argument (`lecture1/Hello.java`). Similarly when I use the argument `lecture1/messages/hi.txt`, I get `lecture1/messages/hi.txt` as the output.
+This command **does not** output an *error*. The working directory was `/home` when the command was run. When the `ls` command is run with a relative or absolute path to a file as an argument, the output is the same relative or absolute path that was provided as an argument. When I run the `ls` command with the relative path argument `lecture1/Hello.java` the output is the same as the argument (`lecture1/Hello.java`). Similarly when I use the argument `lecture1/messages/hi.txt`, I get `lecture1/messages/hi.txt` as the output. Finally when I use the absolute path argument `/home/lecture1/Hello.java`, I get an output of `/home/lecture1/Hello.java`.
 
 
 ---
@@ -109,7 +116,7 @@ test3
 [user@sahara ~]$ pwd
 /home
 ```
-This command was run in the working directory of `/home` and **does not** output an *error*. The output produces an interesting behavior as the command gets stuck in an infinite loop. While in this infinite loop, if you typing something after running the `cat` command, you will receive an output of the same input you provided. For example, when I provided an input of `test` or `test2` as seen above, I immediately received an output of the same input I provided. At the end of the example above, I used the `^C` command to forcefully terminate the run process.
+This command was run in the working directory of `/home` and **does not** output an *error*. The output produces an interesting behavior as the command gets stuck in an infinite loop. While in this infinite loop, if you type something after running the `cat` command, you will receive an output of the same input you provided. For example, when I provided an input of `test` or `test2` as seen above, I immediately received an output of the same input I provided. At the end of the example above, I used the `^C` command to forcefully terminate the run process.
 
 ***path to a directory***
 ```
@@ -139,5 +146,18 @@ public class Hello {
   }
 }[user@sahara ~]$ pwd
 /home
+[user@sahara ~]$ cat /home/lecture1/Hello.java
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Hello {
+  public static void main(String[] args) throws IOException {
+    String content = Files.readString(Path.of(args[0]), StandardCharsets.UTF_8);    
+    System.out.println(content);
+  }
+}[user@sahara ~]$ pwd
+/home
 ```
-This command **does not** output an *error*. The working directory was `/home` when the command was run. When the `cat` command is run with a relative path to a file as an argument, the output is the content of the file. When I run the `cat` command with the argument `lecture1/Hello.java` in the example above, the output I received was the code within the `Hello.java` file.
+This command **does not** output an *error*. The working directory was `/home` when the command was run. When the `cat` command is run with a relative or absolute path to a file as an argument, the output is the content of the file. When I run the `cat` command with the relative path argument `lecture1/Hello.java` in the example above, the output I received was the code within the `Hello.java` file. When I run the `cat` command with the absolute path argument `/home/lecture1/Hello.java` in the example above, the output I received was the code within the `Hello.java` file. 
