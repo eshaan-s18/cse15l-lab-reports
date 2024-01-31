@@ -43,11 +43,16 @@ In this specific request, the `user` field changes to `yash`, and the `message` 
 
 
 # Part 2 #
-***absolute path to private key***
+***absolute path to private key***\
+`/Users/eshaansharma/.ssh/id_rsa`
+![Part 2.1 Screenshot](Part2.1.jpg)
 
-***absolute path to public key***
+***absolute path to public key***\
+`/home/linux/ieng6/oce/7f/essharma/.ssh/authorized_keys`
+![Part 2.2 Screenshot](Part2.2.jpg)
 
-***log into ieng6 account w/o password***
+***log into ieng6 account w/o password***\
+![Part 2.2 Screenshot](Part2.3.jpg)
 
 
 # Part 3 #
