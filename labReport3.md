@@ -111,6 +111,9 @@ grep -n "Thy-1" technical/biomed/1471-213X-1-11.txt
 465:          Oncogene Science, Cambridge, MA. Thy-1 (F15-42-01)
 ```
 
+**the command `grep -n "pattern" filename.txt` is going through the specified file (`technical/911report/chapter-1.txt` and `technical/biomed/1471-213X-1-11.txt` in the cases above) and searching for pattern (`terrorist` and `Thy-1` in the cases above) and their line numbers. This is useful for looking for a specific word or pattern of characters in a large file and identifying the line numbers that correspond to the matching cases. In the first case above, this command was helpful for finding the line numbers that contain the word "terrorist" in the file about 911 reports. In the second case above, this command was helpful for finding the line numbers that contain the character pattern "Thy-1" in the biomed report.**
+
+<br />
 2. `grep -H -c "pattern" /path/to/files/*.txt`
 
 ```
@@ -125,6 +128,9 @@ grep -H -c "ED" technical/government/Alcohol_Problems/Session2-PDF.txt
 technical/government/Alcohol_Problems/Session2-PDF.txt:50
 ```
 
+**the command `grep -H -c "pattern" /path/to/files/*.txt` is going through the specified file (`technical/911report/chapter-13.3.txt` and `technical/government/Alcohol_Problems/Session2-PDF.txt` in the cases above) and searching for pattern (`199` and `ED` in the cases above) and the number of lines that match the pattern. This is useful for looking for the number of lines in a big file that contain the pattern you want if you do not care about the content of the lines and only just the number. In the first case above, this command was helpful for finding the number of lines that contained the number "199" in the file about 911 report. In the second case above, this command was helpful for finding the number of lines that contained "ED" in the file about alcohol problems.**
+
+<br />
 3. `grep -rnH "pattern" /path/to/search`
 
 ```
@@ -143,6 +149,9 @@ technical/government/Env_Prot_Agen/final.txt:156:six pollutants: ozone, carbon m
 technical/government/Env_Prot_Agen/bill.txt:357:material into a gas consistingprimarily of carbon monoxide and
 ```
 
+**the command `grep -rnH "pattern" /path/to/search` is recursively searching a specified directory (`technical/plos` and `technical/government/Env_Prot_Agen` in the cases above) and searching for a pattern (`brain damage` and `carbon monoxide` in the cases above) and the lines and their lines numbers that match the patten. This is useful for when you are trying to find a specified pattern in a directory of many files as you are able to see what file the pattern is in and what line it is contained in. In the first case above, this command was helpful for finding the lines and their line numbers that contains "brain damage" in the `technical/plos` directory. In the second case above, this command was helpful for finding the the lines and their line numbers that conbtains "carbon monoxide" in the `technical/government/Env_Prot_Agen` directory.**
+
+<br />
 4. `grep -e "pattern1" -e "pattern2" filename.txt`
 
 ```
@@ -224,6 +233,11 @@ and the risk of alcohol dependence. Addiction 1993;88:1209-18.
 62. Bercsi S, Brickner P, Saha D. Alcohol use and abuse in the
 68. Burke T. The economic impact of alcohol abuse a
 ```
+
+**the command `grep -e "pattern1" -e "pattern2" filename.txt` is  searching a specified file (`technical/government/Post_Rate_Comm/Cohenetal_comparison.txt` and `technical/government/Alcohol_Problems/Session2-PDF.txt` in the cases above) and searching for multiple patterns (`1999` & `2000` and `dependence` & `abuse` in the cases above) and the lines that match the patten. This is useful for when you are trying to find multiple words or patterns in a long file instead of having to run the `grep` command multiple times for each individual pattern. In the first case above, this command was helpful for finding the lines that contain "1999" or "2000" in the file `technical/government/Post_Rate_Comm/Cohenetal_comparison.txt`. In the second case above, this command was helpful for finding the the lines "dependence" or "abuse" in the `technical/government/Alcohol_Problems/Session2-PDF.txt` file.**
+
+<br />
+<br />
 
 ***Source Cited:***
 <br />
