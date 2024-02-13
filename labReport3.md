@@ -5,8 +5,7 @@
 The bug I chose is the `reversed()` method in the `ArrayExamples.java` file\
 **Original Method Code:**
 ```
-// Returns a *new* array with all the elements of the input array in reversed
-  // order
+// Returns a *new* array with all the elements of the input array in reversed order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
@@ -39,10 +38,10 @@ The bug I chose is the `reversed()` method in the `ArrayExamples.java` file\
 ![1.3 Code Screenshot Image](1.3Screenshot.jpg)
 
 **The bug:**
+<br />
 *Before:*
 ```
-// Returns a *new* array with all the elements of the input array in reversed
-  // order
+// Returns a *new* array with all the elements of the input array in reversed order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for(int i = 0; i < arr.length; i += 1) {
@@ -53,8 +52,7 @@ The bug I chose is the `reversed()` method in the `ArrayExamples.java` file\
 ```
 *After:*
 ```
-// Returns a *new* array with all the elements of the input array in reversed
-  // order
+// Returns a *new* array with all the elements of the input array in reversed order
   static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
     for (int i = 0; i < arr.length; i+=1) {
@@ -114,6 +112,7 @@ grep -n "Thy-1" technical/biomed/1471-213X-1-11.txt
 **the command `grep -n "pattern" filename.txt` is going through the specified file (`technical/911report/chapter-1.txt` and `technical/biomed/1471-213X-1-11.txt` in the cases above) and searching for pattern (`terrorist` and `Thy-1` in the cases above) and their line numbers. This is useful for looking for a specific word or pattern of characters in a large file and identifying the line numbers that correspond to the matching cases. In the first case above, this command was helpful for finding the line numbers that contain the word "terrorist" in the file about 911 reports. In the second case above, this command was helpful for finding the line numbers that contain the character pattern "Thy-1" in the biomed report.**
 
 <br />
+
 2. `grep -H -c "pattern" /path/to/files/*.txt`
 
 ```
@@ -131,6 +130,7 @@ technical/government/Alcohol_Problems/Session2-PDF.txt:50
 **the command `grep -H -c "pattern" /path/to/files/*.txt` is going through the specified file (`technical/911report/chapter-13.3.txt` and `technical/government/Alcohol_Problems/Session2-PDF.txt` in the cases above) and searching for pattern (`199` and `ED` in the cases above) and the number of lines that match the pattern. This is useful for looking for the number of lines in a big file that contain the pattern you want if you do not care about the content of the lines and only just the number. In the first case above, this command was helpful for finding the number of lines that contained the number "199" in the file about 911 report. In the second case above, this command was helpful for finding the number of lines that contained "ED" in the file about alcohol problems.**
 
 <br />
+
 3. `grep -rnH "pattern" /path/to/search`
 
 ```
@@ -152,6 +152,7 @@ technical/government/Env_Prot_Agen/bill.txt:357:material into a gas consistingpr
 **the command `grep -rnH "pattern" /path/to/search` is recursively searching a specified directory (`technical/plos` and `technical/government/Env_Prot_Agen` in the cases above) and searching for a pattern (`brain damage` and `carbon monoxide` in the cases above) and the lines and their lines numbers that match the patten. This is useful for when you are trying to find a specified pattern in a directory of many files as you are able to see what file the pattern is in and what line it is contained in. In the first case above, this command was helpful for finding the lines and their line numbers that contains "brain damage" in the `technical/plos` directory. In the second case above, this command was helpful for finding the the lines and their line numbers that conbtains "carbon monoxide" in the `technical/government/Env_Prot_Agen` directory.**
 
 <br />
+
 4. `grep -e "pattern1" -e "pattern2" filename.txt`
 
 ```
