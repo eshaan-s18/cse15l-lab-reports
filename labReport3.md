@@ -73,7 +73,7 @@ This fix addresses the issue because in the original code, `newArray` is an empt
 The command I chose is `grep`
 *(Source cited at the bottom)*
 
-1. `grep -n "pattern" filename.txt`
+1: `grep -n "pattern" filename.txt`
 
 ```
 grep -n "terrorist" technical/911report/chapter-1.txt
@@ -113,7 +113,7 @@ grep -n "Thy-1" technical/biomed/1471-213X-1-11.txt
 
 <br />
 
-2. `grep -H -c "pattern" /path/to/files/*.txt`
+2: `grep -H -c "pattern" /path/to/files/*.txt`
 
 ```
 grep -H -c "199" technical/911report/chapter-13.3.txt
@@ -131,7 +131,7 @@ technical/government/Alcohol_Problems/Session2-PDF.txt:50
 
 <br />
 
-3. `grep -rnH "pattern" /path/to/search`
+3: `grep -rnH "pattern" /path/to/search`
 
 ```
 grep -rnH "brain damage" technical/plos
@@ -153,7 +153,7 @@ technical/government/Env_Prot_Agen/bill.txt:357:material into a gas consistingpr
 
 <br />
 
-4. `grep -e "pattern1" -e "pattern2" filename.txt`
+4: `grep -e "pattern1" -e "pattern2" filename.txt`
 
 ```
 grep -e "1999" -e "2000" technical/government/Post_Rate_Comm/Cohenetal_comparison.txt
