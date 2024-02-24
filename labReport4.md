@@ -85,6 +85,24 @@ b a s h <space> t e s t . s h <enter>
 The `bash` command followed by `test.sh` followed by `<enter>` allowed me to run the `test.sh` shell file to run the tests in `ListExamplesTests.java` to demonstrate that they now succeed as seen by the `OK (2 tests)` line of the output
 
 ## Step 9 - Commit and push the resulting change to your Github account
+![4.9 Screenshots](4.9Screenshot.jpg)
 
+**Keystrokes**:
+```
+g i t <space> s t a t u s <enter>
+g i t <space> a d d <space> . <enter>
+g i t <space> s t a t u s <enter>
+g i t <space> c o m m i t <space> - m <space> " F i x e d <space> L i s t E x a m p l e s . j a v a " <enter>
+g i t <space> p u s h
+```
 
+The `git` command followed by `status` followed by `<enter>` allowed me to see what branch I was in (`main`) and if my changed files (`ListExamples.java`) were staged for commit (they were not)
+<br>
+My changes were not staged for commit, so I used the `git` command followed by `add` followed by `.` followed by `<enter>` to stage all the files I changed (`ListExamples.java`)
+<br>
+I ran the `git` command followed by `status` followed by `<enter>` again to see if my changed files were staged for commit (they were)
+<br>
+The `git` command followed by `commit` followed by `-m` followed by `Fixed ListExamples.java` allowed my to commit my changes to the `ListExamples.java` file  with a message of my choosing ("Fixed ListExamples.java")
+<br>
+The `git` command followd by `push` allowed me to push my changes to the `main` branch in the repository on my Github account
 
