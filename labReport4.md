@@ -38,11 +38,11 @@ The `cd` command followed by `lab7` followed by `<enter>` allowed me to move int
 <br>
 The `ls` command followed by `<enter>` allowed me to see the files in the `lab7` directory including the `test.sh`, `ListExamples.java`, and `ListExamplesTests.java` files.
 <br>
-The `bash` command followed by `test.sh` followed by `<enter>` allowed me to run the `test.sh` shell file to run the tests in `ListExamplesTests.java` to demonstrate tha they fail as seen by the `Tests run: 2,
+The `bash` command followed by `test.sh` followed by `<enter>` allowed me to run the `test.sh` shell file to run the tests in `ListExamplesTests.java` to demonstrate that they fail as seen by the `Tests run: 2,
 Failures: 1` line of the output
 
 
-# Step 7 - Edit the code file to fix the failing test
+## Step 7 - Edit the code file to fix the failing test
 ![4.7.1 Screenshot](4.7.1Screenshot.jpg)
 ![4.7.2 Screenshot](4.7.2Screenshot.jpg)
 ![4.7.3 Screenshot](4.7.3Screenshot.jpg)
@@ -74,6 +74,17 @@ These keystrokes allowed me to change the `index1 += 1;` line to `index2 += 1;`
 <br>
 Finally, the `<esc>` command followed by `:wq` followed by `<enter`> allowed me to successfully save and exit the edited and fixed `ListExamples.java` file.
 
+
+## Step 8 - Run the tests, demonstrating that they now succeed
+![4.8 Screenshot](4.8Screenshot.jpg)
+
+**Keystrokes**:
+```
+b a s h <space> t e s t . s h <enter>
+```
+The `bash` command followed by `test.sh` followed by `<enter>` allowed me to run the `test.sh` shell file to run the tests in `ListExamplesTests.java` to demonstrate that they now succeed as seen by the `OK (2 tests)` line of the output
+
+## Step 9 - Commit and push the resulting change to your Github account
 
 
 
