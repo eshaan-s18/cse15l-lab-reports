@@ -39,4 +39,41 @@ The `cd` command followed by `lab7` followed by `<enter>` allowed me to move int
 The `ls` command followed by `<enter>` allowed me to see the files in the `lab7` directory including the `test.sh`, `ListExamples.java`, and `ListExamplesTests.java` files.
 <br>
 The `bash` command followed by `test.sh` followed by `<enter>` allowed me to run the `test.sh` shell file to run the tests in `ListExamplesTests.java` to demonstrate tha they fail as seen by the `Tests run: 2,
-Failures: 1` line
+Failures: 1` line of the output
+
+
+# Step 7 - Edit the code file to fix the failing test
+![4.7.1 Screenshot](4.7.1Screenshot.jpg)
+![4.7.2 Screenshot](4.7.2Screenshot.jpg)
+![4.7.3 Screenshot](4.7.3Screenshot.jpg)
+
+**Keystrokes**:
+```
+v i m <space> L i <tab> . <tab> <enter>
+4 3 J
+1 1 L
+X
+I
+2
+<esc> : w q <enter>
+```
+
+The `vim` command followed by `Li <tab>` (which autofilled `ListExamples` in my terminal) followed by `. <tab>` (which autofilled `.java` in my terminal) followed by `<enter>` allowed me to open *vim* to edit th `ListExamples.java` file
+<br>
+The `43J` keystroke in vim took me down 43 lines to the line with `index1 += 1;`
+<br>
+The `11L` keystroke in vim took me right 11 space on the `index1 += 1;` line to the 11th character from the right `1`
+<br>
+The `X` keystroke in vim deleted the `1` character, leaving `index +=1;` on the line
+<br>
+The `I` keystroke in vim opened up *insert mode*
+<br>
+The `2` keystroke inserted the character `2` in the position to the left of where my cursor was (in between the `x` and `+` in the `index +=1;` line)
+<br>
+These keystrokes allowed me to change the `index1 += 1;` line to `index2 += 1;`
+<br>
+Finally, the `<esc>` command followed by `:wq` followed by `<enter`> allowed me to successfully save and exit the edited and fixed `ListExamples.java` file.
+
+
+
+
